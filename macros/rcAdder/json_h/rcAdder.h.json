@@ -1,0 +1,745 @@
+{
+  "creator": "Yosys 0.48 (git sha1 aaa534749, g++ 11.4.0-1ubuntu1~22.04 -fPIC -O3)",
+  "modules": {
+    "rcAdder": {
+      "attributes": {
+        "hdlname": "rcAdder",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:1.1-32.10"
+      },
+      "parameter_default_values": {
+        "width": "00000000000000000000000000000100"
+      },
+      "ports": {
+        "VPWR": {
+          "direction": "inout",
+          "bits": [ 2 ]
+        },
+        "VGND": {
+          "direction": "inout",
+          "bits": [ 3 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "a_i": {
+          "direction": "input",
+          "bits": [ 5, 6, 7, 8 ]
+        },
+        "b_i": {
+          "direction": "input",
+          "bits": [ 9, 10, 11, 12 ]
+        },
+        "sum_o": {
+          "direction": "output",
+          "bits": [ 13, 14, 15, 16 ]
+        },
+        "carry_o": {
+          "direction": "output",
+          "bits": [ 17 ]
+        }
+      },
+      "cells": {
+        "$flatten\\fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 9 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$flatten\\fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ "0" ],
+            "Y": [ 20 ]
+          }
+        },
+        "$flatten\\fa0.$or$/home/asic/workspace/macro/rtl/fullAdder.sv:14$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.15-14.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 18 ],
+            "B": [ 20 ],
+            "Y": [ 21 ]
+          }
+        },
+        "$flatten\\fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:12$3": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:12.14-12.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 9 ],
+            "Y": [ 19 ]
+          }
+        },
+        "$flatten\\fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:13$4": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:13.13-13.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19 ],
+            "B": [ "0" ],
+            "Y": [ 22 ]
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 10 ],
+            "Y": [ 23 ]
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 21 ],
+            "Y": [ 25 ]
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$or$/home/asic/workspace/macro/rtl/fullAdder.sv:14$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.15-14.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 23 ],
+            "B": [ 25 ],
+            "Y": [ 26 ]
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:12$3": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:12.14-12.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 10 ],
+            "Y": [ 24 ]
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:13$4": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:13.13-13.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 24 ],
+            "B": [ 21 ],
+            "Y": [ 27 ]
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 11 ],
+            "Y": [ 28 ]
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29 ],
+            "B": [ 26 ],
+            "Y": [ 30 ]
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$or$/home/asic/workspace/macro/rtl/fullAdder.sv:14$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.15-14.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28 ],
+            "B": [ 30 ],
+            "Y": [ 31 ]
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:12$3": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:12.14-12.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 11 ],
+            "Y": [ 29 ]
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:13$4": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:13.13-13.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 29 ],
+            "B": [ 26 ],
+            "Y": [ 32 ]
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 12 ],
+            "Y": [ 33 ]
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 31 ],
+            "Y": [ 35 ]
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$or$/home/asic/workspace/macro/rtl/fullAdder.sv:14$7": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.15-14.46"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 33 ],
+            "B": [ 35 ],
+            "Y": [ 17 ]
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:12$3": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:12.14-12.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 12 ],
+            "Y": [ 34 ]
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$xor$/home/asic/workspace/macro/rtl/fullAdder.sv:13$4": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:13.13-13.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 31 ],
+            "Y": [ 36 ]
+          }
+        },
+        "$procdff$8": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "always_ff": "00000000000000000000000000000001",
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:28.1-30.4"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 4 ],
+            "D": [ 22, 27, 32, 36 ],
+            "Q": [ 13, 14, 15, 16 ]
+          }
+        }
+      },
+      "netnames": {
+        "$flatten\\fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5_Y": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          }
+        },
+        "$flatten\\fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6_Y": {
+          "hide_name": 1,
+          "bits": [ 20 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5_Y": {
+          "hide_name": 1,
+          "bits": [ 23 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          }
+        },
+        "$flatten\\genblk1[1].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6_Y": {
+          "hide_name": 1,
+          "bits": [ 25 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5_Y": {
+          "hide_name": 1,
+          "bits": [ 28 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          }
+        },
+        "$flatten\\genblk1[2].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6_Y": {
+          "hide_name": 1,
+          "bits": [ 30 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$5_Y": {
+          "hide_name": 1,
+          "bits": [ 33 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.16-14.25"
+          }
+        },
+        "$flatten\\genblk1[3].fa0.$and$/home/asic/workspace/macro/rtl/fullAdder.sv:14$6_Y": {
+          "hide_name": 1,
+          "bits": [ 35 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:14.30-14.45"
+          }
+        },
+        "VGND": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:4.11-4.15"
+          }
+        },
+        "VPWR": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:3.11-3.15"
+          }
+        },
+        "a_i": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7, 8 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:7.23-7.26"
+          }
+        },
+        "b_i": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11, 12 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:8.23-8.26"
+          }
+        },
+        "carry_o": {
+          "hide_name": 0,
+          "bits": [ 17 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:10.18-10.25"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:6.11-6.14"
+          }
+        },
+        "fa0.carry_o": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+            "hdlname": "fa0 carry_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:6.18-6.25"
+          }
+        },
+        "fa0.sum_l": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "hdlname": "fa0 sum_l",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:9.7-9.12"
+          }
+        },
+        "fa0.sum_o": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "hdlname": "fa0 sum_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:5.18-5.23"
+          }
+        },
+        "genblk1[1].fa0.carry_o": {
+          "hide_name": 0,
+          "bits": [ 26 ],
+          "attributes": {
+            "hdlname": "genblk1[1].fa0 carry_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:6.18-6.25"
+          }
+        },
+        "genblk1[1].fa0.sum_l": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+            "hdlname": "genblk1[1].fa0 sum_l",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:9.7-9.12"
+          }
+        },
+        "genblk1[1].fa0.sum_o": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+            "hdlname": "genblk1[1].fa0 sum_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:5.18-5.23"
+          }
+        },
+        "genblk1[2].fa0.carry_o": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "hdlname": "genblk1[2].fa0 carry_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:6.18-6.25"
+          }
+        },
+        "genblk1[2].fa0.sum_l": {
+          "hide_name": 0,
+          "bits": [ 29 ],
+          "attributes": {
+            "hdlname": "genblk1[2].fa0 sum_l",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:9.7-9.12"
+          }
+        },
+        "genblk1[2].fa0.sum_o": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "hdlname": "genblk1[2].fa0 sum_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:5.18-5.23"
+          }
+        },
+        "genblk1[3].fa0.sum_l": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "hdlname": "genblk1[3].fa0 sum_l",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:9.7-9.12"
+          }
+        },
+        "genblk1[3].fa0.sum_o": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+            "hdlname": "genblk1[3].fa0 sum_o",
+            "src": "/home/asic/workspace/macro/rtl/fullAdder.sv:5.18-5.23"
+          }
+        },
+        "sum_o": {
+          "hide_name": 0,
+          "bits": [ 13, 14, 15, 16 ],
+          "attributes": {
+            "src": "/home/asic/workspace/macro/rtl/rcAdder.sv:9.30-9.35"
+          }
+        }
+      }
+    }
+  }
+}

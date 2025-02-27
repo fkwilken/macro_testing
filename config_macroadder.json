@@ -1,0 +1,63 @@
+{
+    "DESIGN_NAME": "macroAdder",
+    "VERILOG_FILES": [ "dir::rtl/macroAdder.sv"],
+   
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 8,
+   
+    "pdk::sky130A": {
+      "MAX_FANOUT_CONSTRAINT": 6,
+      "FP_CORE_UTIL": 40,
+      "PL_TARGET_DENSITY_PCT": "expr::($FP_CORE_UTIL + 10.0)",
+      "scl::sky130_fd_sc_hd": {
+        "CLOCK_PERIOD": 8.0
+      }
+    },
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": [0, 0, 2920, 3520],
+
+    "//": "Hardening strategy variables (this is for 3-Top-Level Integration). Visit https://docs.google.com/document/d/1pf-wbpgjeNEM-1TcvX2OJTkHjqH_C9p-LURCASS0Zo8 for more info",
+    "SYNTH_ELABORATE_ONLY": false,
+    "RUN_POST_GPL_DESIGN_REPAIR": true,
+    "RUN_POST_CTS_RESIZER_TIMING": true,
+    "DESIGN_REPAIR_BUFFER_INPUT_PORTS": true,
+    "FP_PDN_ENABLE_RAILS": true,
+    "RUN_ANTENNA_REPAIR": true,
+    "RUN_FILL_INSERTION": true,
+    "RUN_TAP_ENDCAP_INSERTION": true,
+    "RUN_CTS": true,
+    "RUN_IRDROP_REPORT": false,
+    
+    "MACROS": {
+      "rcAdder": {
+          "instances": {
+          "adder1": {
+              "location": [1000, 2000],
+              "orientation": "N"
+          },
+          "adder2": {
+              "location": [1500, 2000],
+              "orientation": "N"
+          }
+        },
+          "gds": [
+              "dir::macros/rcAdder/gds/rcAdder.gds"
+          ],
+          "lef": [
+              "dir::macros/rcAdder/lef/rcAdder.lef"
+          ],
+          "spef": {
+              "*": [
+                "dir::macros/rcAdder/spef/max/rcAdder.max.spef"
+              ]
+          },
+          "lib": {
+              "*": "dir::macros/rcAdder/lib/max_ss_100C_1v60/rcAdder__max_ss_100C_1v60.lib"
+          },
+          "nl": [
+            "dir::macros/rcAdder/nl/rcAdder.nl.v"
+          ]
+      }
+     }
+  }
