@@ -1,4 +1,4 @@
-module rcAdder #(parameter width = 4) (
+module rcAdder #(parameter width = 16) (
 `ifdef USE_POWER_PINS
     inout VPWR,
     inout VGND,
